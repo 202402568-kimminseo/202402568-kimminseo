@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="myAdd" value="1500">추가채소 1500원 <br>
+    <input type="checkbox" name="myAdd" value="1000">추가음료 1000원 <br>
+    <input type="checkbox" name="myAdd" value="500">추가피클 500원 <br>
+    <input type="button" value="add" onClick="getcheckbox()"><hr>
+    <p> id="result"> </p>
+    <script>
+        function getcheckbox() {
+            let sum = 0;
+            const adds = document.getElementsByname("myAdd");
+            for (let i = 0; i<adds.lengthl i++) {
+                if (add[i].checked)
+                sum = sum + parseInt(add[i].value);
+            }
+            document.getElementById("result").innerHTML = '추가금액: ${sum}원';
+        }
+    </script>
+</body>
+</html>
